@@ -1,0 +1,762 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-card {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  width: 320px;
+  text-align: center;
+}
+
+.login-icon {
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+
+.login-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: #111827;
+}
+
+.login-subtitle {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.login-form label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.login-form input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 1.5px solid #d1d5db;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #2563eb;
+}
+
+.login-btn {
+  margin-top: 1rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #1e40af;
+}
+
+.demo-credentials {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.calendar-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 960px;
+  margin: 40px auto 80px;
+  padding: 24px 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  color: #333;
+  user-select: none;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.clinic-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.calendar-actions {
+  display: flex;
+  gap: 14px;
+}
+
+
+
+.dark-mode-toggle,
+.add-button {
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.dark-mode-toggle:hover,
+.add-button:hover {
+  background-color: #1d4ed8;
+}
+
+.calendar-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.calendar-controls-row select {
+  padding: 8px 12px;
+  margin-right: 50%;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  min-width: 160px;
+  transition: border-color 0.3s ease;
+}
+
+.calendar-controls-row select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.calendar-month-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #444;
+}
+
+.calendar-month-header button {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #2563eb;
+  padding: 4px 8px;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.calendar-month-header button:hover {
+  color: #1d4ed8;
+}
+
+.current-datetime {
+  background-color: #f3f4f6;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 0;
+  background-color: #e0e7ff;
+  border-radius: 10px;
+  color: #2563eb;
+  user-select: none;
+}
+
+.calendar-day {
+  min-height: 90px;
+  padding: 12px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #fafafa;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.calendar-day:hover {
+  background-color: #eff6ff;
+  border-color: #2563eb;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+.calendar-day.has-appointment {
+  background-color: #dbeafe;
+  border-color: #2563eb;
+}
+
+.day-number {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #1e40af;
+  user-select: none;
+}
+
+.appointment {
+  font-size: 13px;
+  background-color: #bfdbfe;
+  color: #1e3a8a;
+  padding: 4px 6px;
+  margin-top: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.appointment:hover {
+  background-color: #93c5fd;
+}
+
+select,
+input[type="date"],
+input[type="time"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.add-button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.25s ease;
+}
+
+.add-button:hover {
+  background-color: #1d4ed8;
+}
+
+.cancel-button {
+  background-color: #e5e7eb;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #cbd5e1;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+}
+
+.modal {
+  background: #fff;
+  padding: 28px 36px;
+  width: 360px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+.modal label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.modal .cancel-button.delete {
+  background-color: #f87171;
+  color: white;
+  font-weight: 700;
+}
+
+.modal .cancel-button.delete:hover {
+  background-color: #dc2626;
+}
+
+.calendar-container.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+}
+
+.calendar-container.dark .calendar-day {
+  background-color: #1e1e1e;
+  border-color: #333;
+  color: #ddd;
+}
+
+.calendar-container.dark .calendar-day.has-appointment {
+  background-color: #2a2a72;
+  border-color: #5050a0;
+}
+
+.calendar-container.dark .appointment {
+  background-color: #4444aa;
+  color: #ddd;
+}
+
+.calendar-container.dark .calendar-day-name {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+.calendar-container.dark .calendar-header,
+.calendar-container.dark .calendar-month-header {
+  color: #eee;
+}
+
+.calendar-container.dark .add-button,
+.calendar-container.dark .dark-mode-toggle {
+  background-color: #4444aa;
+  color: #eee;
+}
+
+.calendar-container.dark .cancel-button {
+  background-color: #333;
+  color: #ccc;
+}
+
+.calendar-container.dark select,
+.calendar-container.dark input {
+  background-color: #222;
+  color: #eee;
+  border-color: #555;
+}
+
+.current-datetime {
+  background-color: #f1f5f9;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+.calendar-container.dark .current-datetime {
+  background-color: #2c2c2c;
+  color: #e5e5e5;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked+.slider {
+  background-color: #2196F3;
+}
+
+.switch input:checked+.slider:before {
+  transform: translateX(24px);
+}
+
+
+.switch input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.mobile-view {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
+
+
+  .calendar-grid,
+  .calendar-controls-row,
+  .calendar-header {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .mobile-view label {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .mobile-view input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1.5px solid #2563eb;
+  }
+
+  .appointments-list {
+    margin-top: 20px;
+  }
+
+  .appt-card {
+    background-color: #dbeafe;
+    border: 1.5px solid #2563eb;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+
+  .appt-card div {
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+
+  .card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .card-actions button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .card-actions button:hover {
+    background-color: #1d4ed8;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .calendar-grid,
+  .calendar-controls-row,
+  .calendar-header {
+    display: none !important;
+  }
+
+  .add-btn {
+    background-color: #2563eb;
+    color: white;
+    width: 20%;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-btn:hover {
+    background-color: #1e40af;
+  }
+
+  .add-btn {
+    width: 30%;
+    height: 10%;
+  }
+
+  .mobile-view {
+    display: block;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .mobile-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .mobile-select {
+    padding: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .mobile-date-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .mobile-date {
+    padding: 10px;
+    font-size: 16px;
+    border: 1.5px solid #2563eb;
+    border-radius: 8px;
+    flex: 1;
+  }
+
+  .mobile-date-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    white-space: nowrap;
+  }
+
+  .mobile-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-add-button,
+  .mobile-toggle-button {
+    flex: 1;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #2563eb;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    font-size: 14px;
+  }
+
+  .mobile-add-button:hover,
+  .mobile-toggle-button:hover {
+    background-color: #1d4ed8;
+  }
+
+  .appointments-list {
+    margin-top: 10px;
+  }
+
+  .appt-card {
+    background-color: #f1f5ff;
+    border: 1px solid #2563eb;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .appt-card div {
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #1e293b;
+  }
+
+  .card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .card-actions button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    background-color: #2563eb;
+  }
+
+  .card-actions button:hover {
+    background-color: #1e40af;
+  }
+
+  .no-appointments {
+    text-align: center;
+    background-color: #f9fafb;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    color: #6b7280;
+    font-size: 15px;
+  }
+
+  .mobile-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .mobile-filters select {
+    flex: 1;
+    padding: 10px;
+    border: 1.5px solid #2563eb;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+  }
+
+  .mobile-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .mobile-filters select {
+    flex: 1;
+    padding: 10px;
+    border: 1.5px solid #2563eb;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+  }
+
+  .top-bar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+  }
+
+
+
+}
