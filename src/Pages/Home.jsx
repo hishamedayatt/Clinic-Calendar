@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Clinic from '../Components/clinic';
 
 
@@ -6,7 +6,7 @@ const Home = () => {
    
 
   return (
-    <div className='home'>
+    <div>
       <Clinic/>
     </div>
       
